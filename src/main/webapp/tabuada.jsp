@@ -5,43 +5,70 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Tabuada</title>
+
+<style>
+	
+	body {
+	margin: 1rem;
+	}
+
+	table, tr, td {
+		border: 0.1rem solid #000;
+	}
+	
+	
+	h2 {
+		margin: 1rem, 0;
+	}
+	
+	
+	a {
+	
+	margin-bottom: 1rem;
+	padding: 1rem;
+	text-decoration: none;
+	transition: all .2s;
+	}
+	
+	a:hover {
+	background-color: #0000ff;
+	color: #fff;
+	}
+
+</style>
+
+
 </head>
 <body>
 
+   <a href="index.html">Voltar para o início</a>
 
-
-
-
-<%
-int v = Integer.parseInt(request.getParameter("v"));
-%>
-
-<%
-for (int i = 0; i <= 10; i++) {
-	 %>
-	 <br>
-	<%	
-	out.print(v + " x " + i + " = " + i*v);
+<!-- TODO CÓDIGO JAVA FICA ENTRE SINAL DE MENOR/MAIOR COM %% "<>" -->
+<!-- TODO CÓDIGO HTML DEVE SER INSERIDO FORA DA ÁREA RESERVADA PARA O CÓDIGO JAVA -->
 	
-}
-%>
+	<% int v = Integer.parseInt(request.getParameter("v")); %>
 
-<br><br>
+	<% for (int i = 1; i <= 10; i++) {  %>
+
+ <br>
+	 <p>
+		<% out.print(v + " x " + i + " = " + i*v); } %>
+	</p>
 
 
-<table border="1">
+<h2>Mostrando os valores em TABELA</h2>
 
-<% 
-for (int i = 0; i <= 10; i++) {
-	 %>
+	<table>
+
+		<% for (int i = 1; i <= 10; i++) {	 %>
 	 
-	 <tr>
-	 
-	<td> <% out.print(v + " x " + i + " = " + i*v); %> </td>
+	<tr> <!-- INÍCIO LINHA -->
+	<td> <!-- INÍCIO COLUNA -->
 	
-<% } %> <!-- FECHAMENTO DO LOOP -->
+		<% out.print(v + " x " + i + " = " + i*v); } %> <!-- FECHAMENTO DO LOOP -->
 	
-	</tr>
+	</td> <!-- FECHAMENTO COLUNA -->
+	</tr> <!-- FECHAMENTO LINHA -->
 
 </table>
 

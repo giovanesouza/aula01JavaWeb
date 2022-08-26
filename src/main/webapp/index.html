@@ -4,12 +4,51 @@
 <meta charset="ISO-8859-1">
 <title>Aula 01 - Java Web</title>
 </head>
+
+<style>
+
+	body {
+	margin: 1rem;
+	}
+	
+	h1 {
+	text-align: center;
+	}
+
+	ul, li, a {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	
+	list-style: none;
+	text-decoration: none;
+	
+	transition: all .2s;
+	
+	}
+
+
+	a:hover {
+	background-color: #0000ff;
+	color: #fff;
+	}
+
+
+</style>
+
+
+
 <body>
 
-<h1>FINALMENTEE!!!!!!</h1>
+<h1>AULA 01 - JAVA WEB INTERMEDIÁRIO</h1>
 
+<ul>
 
+<li><a href="calculos.jsp?v=5">Cálculos e Tabela com nome</a></li> <!-- LINK PARA PAGE TABUADA JÁ COM PARÂMETRO (TABUADA DE 5) -->
+<li><a href="tabuada.jsp?v=5">Tabuada</a></li> <!-- LINK PARA PAGE TABUADA JÁ COM PARÂMETRO (TABUADA DE 5) -->
+<li><a href="nomeIdade.jsp?no=Giovane&id=26">Nome/Idade (faixa etária)</a></li>
+<li><a href="enviarParametro.jsp?n1=20&n2=60">Maior valor / Menor valor</a></li> <!-- COM BASE NOS PARÂMETROS, MOSTRA QUAL NÚMERO É MAIOR -->
 
+</ul>
 
 </body>
 </html>
